@@ -1,0 +1,39 @@
+body {
+    background-color: #eee;
+}
+
+.container {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    height: 95%;
+}
+
+.card {
+    flex-basis: 90%;
+    padding: 1rem;
+    background-color: white;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 0 black;
+}
+
+table {
+
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+caption {
+    box-sizing: content-box;
+    padding: 1rem;
+}
+
+th,
+td {
+    padding: 1rem 2rem;
+    border: 1px solid black;
+}

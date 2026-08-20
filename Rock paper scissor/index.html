@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/script.js" type="module"></script>
+    <title>Rock paper scissor</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div>
+            <label for="roundCount">How many rounds to play? </label>
+            <input type="number" id="roundCount" placeholder="1 is the default" value="1">
+        </div>
+
+        <p class="round-played"></p>
+        <div class="container choice"> <label for="choice-select">Choose a hand:</label>
+            <select name="hand" id="choice-select">
+                <option value="">--Please choose an option--</option>
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissor">Scissor</option>
+            </select>
+        </div>
+
+        <div>
+            <button class="one"> Play One Round</button>
+        </div>
+
+
+        <div class="computer"></div>
+        <div>
+            <span class="round-info"></span>
+        </div>
+
+        <div class="output"></div>
+        <div class="error-log"></div>
+
+    </div>
+
+</body>
+
+</html>

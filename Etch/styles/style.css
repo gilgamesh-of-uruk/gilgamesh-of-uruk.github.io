@@ -1,0 +1,51 @@
+body {
+    margin-top: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+}
+
+.col,
+.row,
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: black;
+}
+
+.container {
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+
+}
+
+.col {
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 200px;
+
+}
+
+.input>* {
+    flex: 1 0 auto;
+}

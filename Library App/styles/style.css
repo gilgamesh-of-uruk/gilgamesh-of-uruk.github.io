@@ -1,0 +1,273 @@
+@layer first, second;
+
+@layer first {
+    :root {
+        --bg-color: #f8fafc;
+        --card-bg: #ffffff;
+        --text-main: #0f172a;
+        --text-muted: #64748b;
+        --delete-bg: #f1f5f9;
+        --delete-text: #64748b;
+        --delete-hover-bg: #ef4444;
+        --delete-hover-text: #ffffff;
+        --shadow:
+            0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        --shadow-hover:
+            0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    }
+
+    body {
+        font-family:
+            "Inter",
+            system-ui,
+            -apple-system,
+            sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+    }
+
+    main {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 5rem 8rem;
+    }
+
+    .copy-right {
+        align-self: center;
+        color: var(--text-muted);
+    }
+
+    .copy-right a {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 120%;
+        color:lightblue;
+    }
+
+    .copy-right a:hover {
+        /* text-decoration: underline; */
+        border:1px solid grey;
+    }
+
+    .row-con {
+        display: flex;
+    }
+
+    .col-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        padding-top: 1rem;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid lightgrey;
+        align-items: center;
+    }
+
+    h1 {
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .soft-title {
+        font-weight: normal;
+        font-family: "Inter";
+        color: var(--text-muted);
+    }
+
+    .add-book {
+        background-color: #2563EB;
+        color: white;
+        font-weight: bolder;
+        font-size: 120%;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+    }
+
+    .add-book:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+        transform: translateY(-1);
+        cursor: pointer;
+    }
+
+    .cards {
+        padding-top: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background-color: var(--card-bg);
+        padding: 1.5rem;
+        border-radius: 10px;
+        gap: 0.7rem;
+        box-shadow: var(--shadow);
+        flex-basis: 300px;
+    }
+
+    .card-title {
+        font-weight: bolder;
+    }
+
+    .card-author {
+        color: var(--text-muted);
+    }
+
+    .card-read,
+    .card-del {
+        padding: 0.3rem 2rem;
+        border-radius: 5px;
+        border: none;
+        font-weight: bolder;
+    }
+
+    .card-read:hover,
+    .card-del:hover {
+
+        cursor: pointer;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-read {
+        background-color: lightcoral;
+        color: white;
+    }
+
+    .card-read:not(.read):hover {
+        background-color: #ef4444;
+    }
+
+    .card-del {
+        background-color: var(--delete-bg);
+        color: var(--delete-text);
+    }
+
+    .card-del:hover {
+        background-color: var(--delete-hover-bg);
+        color: var(--delete-hover-text);
+    }
+
+    .read {
+        color: green;
+        background-color: lightgreen;
+    }
+
+    .card-read:not(.read)::after {
+        content: " Yet";
+    }
+
+    .card-read:not(.read)::Before {
+        content: "Not "
+    }
+
+    .card-read.read:hover {
+        background-color: rgb(0, 150, 0);
+        color: rgba(250, 250, 250, 0.9);
+    }
+
+    .blured-bg {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+
+    }
+
+
+    .blured-bg form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: var(--shadow);
+        gap: 0.5rem;
+        padding: 2rem;
+        border: 1px solid lightgrey;
+    }
+
+    .blured-bg form .logo {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .blured-bg form>input:not(.submit) {
+        padding: 0.5rem 1rem 0.5rem 5px;
+        border: 1px solid grey;
+        border-radius: 5px;
+
+        width: 20rem;
+    }
+
+    .blured-bg form label {
+        font-weight: bolder;
+    }
+
+    .read-this {
+        align-self: stretch;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .blured-bg form .logo .reset {
+        width: 2em;
+        height: 2em;
+        background-color: white;
+        border: 1px solid grey;
+        border-radius: 50%;
+    }
+
+    form .submit {
+        text-align: center;
+        align-self: stretch;
+        color: white;
+        font-weight: bolder;
+        font-size: 120%;
+        background-color: #2563EB;
+        border: none;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+        padding: 0.5rem 2rem;
+    }
+
+    form .submit:hover,
+    form .logo .reset:hover {
+        cursor: pointer;
+    }
+
+    form .submit:hover {
+        box-shadow: var(--shadow-hover);
+    }
+
+    form .logo .reset:hover {
+        box-sizing: border-box;
+        padding: 1px;
+        border: 1px solid black;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+@layer second {
+    input:invalid {
+        border-color: red;
+
+    }
+}

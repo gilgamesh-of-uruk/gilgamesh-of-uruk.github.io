@@ -1,0 +1,45 @@
+body {
+    padding: 2rem;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    font-family: monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    background-color: #F0F0F0;
+    border: 2px solid black;
+    border-radius: 5px;
+    gap: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btn {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#input {
+    line-height: 2;
+}
+
+.prev-log {
+    font-size: small;
+    height: 2rem;
+    align-self: stretch;
+    padding: 1 rem;
+    color: lightslategrey;
+    overflow: auto;
+    background-color: lightgrey;
+    padding: 0.5rem;
+    border-radius: 3px;
+}

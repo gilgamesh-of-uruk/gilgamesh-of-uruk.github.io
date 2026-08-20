@@ -1,0 +1,188 @@
+body {
+    display: flex;
+}
+
+.top-container {
+    display: flex;
+    flex-basis: 100%;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+
+}
+
+.left {
+    flex-grow: 2;
+    background-color: grey;
+    background-image: url("./bg.png");
+}
+
+.left-hero {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.4);
+    margin-top: 25%;
+    margin-bottom: auto;
+    color: white;
+    padding: 0.5rem 0;
+}
+
+.logo {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.logo-text {
+    font-size: 1em;
+}
+
+.logo-bg {
+    background-image: url("./logo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 4em;
+}
+
+
+.right {
+    flex: 3;
+}
+
+.title,
+.form-field,
+.form-submit,
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.title {
+    flex-basis: 25%;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    padding-right: 20%;
+    gap: 2rem;
+    background-color: #F9FAFB;
+    padding-left: 1rem;
+
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    padding-top: 1rem;
+}
+
+.italic {
+    font-style: italic;
+}
+
+h2 {
+    padding-left: 1rem;
+}
+
+form {
+    margin-top: 1rem;
+    flex-basis: 75%;
+
+}
+
+.form-field {
+    margin-top: 0.5rem;
+    flex-basis: 40%;
+    flex-flow: wrap row;
+    padding-right: 30%;
+    align-content: flex-start;
+    gap: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-submit {
+    margin-top: 1rem;
+    flex-basis: 60%;
+    background-color: #F9FAFB;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    box-shadow: 2px 5px 21px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: content-box;
+    flex-grow: 1;
+}
+
+.foo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 2px;
+    color: rgb(0, 0, 0, 0.9);
+}
+
+input {
+    width: 220px;
+
+    border: none;
+    outline: none;
+    border: 1px solid grey;
+
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+
+    color: #222222;
+}
+
+button {
+    box-sizing: content-box;
+    background-color: #596D48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    align-self: flex-start;
+    font-weight: bolder;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0px 0px 3px 1px rgb(0, 0, 0, 0.3);
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: lightgreen;
+}
+
+input:focus {
+    box-shadow: 0px 0px 2px 0px rgb(0, 0, 0, 0.1);
+    border: 2px solid rgb(0, 0, 255, 0.3);
+}
+
+
+.left-footer {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    color: white;
+}
+
+.left-footer a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.log-in {
+    color: #596D48;
+}

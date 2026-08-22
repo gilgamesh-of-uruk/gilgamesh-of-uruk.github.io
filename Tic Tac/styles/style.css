@@ -1,0 +1,72 @@
+.top {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+
+    flex-basis: 50%;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.container .item {
+    width: 100%;
+    border: 1px solid black;
+    aspect-ratio: 1 / 1;
+    background-color: bisque;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.container .item:not(.marked):hover {
+    transform: scale3d(1.2, 1.2, 1);
+    box-shadow: 0px 0px 15px 1px grey;
+    cursor: pointer;
+    /* Important because position relative messes things up for transform scale3d */
+    z-index: 1;
+}
+
+.marked {
+    color: brown;
+}
+
+
+hr {
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border: none;
+    border-top: 1px solid brown;
+}
+
+hr.vert {
+    transform: rotateZ(90deg);
+}
+
+hr.diag {
+    transform: rotateZ(45deg) scaleX(1.414);
+}
+
+hr.diag.inverted {
+    transform: rotateZ(-45deg) scaleX(1.414);
+}
+
+.hidden {
+    display: none;
+}
